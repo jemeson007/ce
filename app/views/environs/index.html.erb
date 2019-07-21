@@ -19,10 +19,10 @@
       <td><%= environ.name %></td>
       <td><%= environ.place %></td>
       <td><%= environ.subscription %></td>
-      <%= environ.spend = environ.amount * 1.21212 %>
+      <%= environ.spend = environ.amount * 2.015 %>
       <td><%= environ.currency %><%= environ.spend.round(2)%></td>
       <td><%= link_to 'Show', environ_path(environ) %></td>
-        <td><%= link_to "Procure", "https://www.paystack.com/pay/cleanup", :target => "_blank" %></td>  
+        <td><%= link_to "Procure", "https://paystack.com/pay/clean", :target => "_blank" %></td>  
       
       <% if environ.being == current_being %>
         
