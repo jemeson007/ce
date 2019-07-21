@@ -38,29 +38,29 @@
 			<p>
 				<div class="form-group">
 					<%= form.label :subscription_Laundry, "Laundry", class: "control-label" %>
-					<%= form.radio_button :subscription, class: "form-control" %>
+					<%= form.radio_button :subscription, class: "form-control" %><br>
 					<%= form.label :subscription_HouseClean, "House Clean", class: "control-label" %>
-					<%= form.radio_button :subscription,  class: "form-control" %>
+					<%= form.radio_button :subscription,  class: "form-control" %><br>
 					<%= form.label :subscription_OfficeFumigation,"Office Fumigation", class: "control-label" %>
-					<%= form.radio_button :subscription,  class: "form-control" %>
+					<%= form.radio_button :subscription,  class: "form-control" %><br>
 					<%= form.label :subscription_LaunH, "Laundry & House Clean", class: "control-label" %>
-					<%= form.radio_button :subscription,  class: "form-control" %>
+					<%= form.radio_button :subscription,  class: "form-control" %><br>
 					<%= form.label :subscription_LaunOffc, "Laundry & Office Fumigation", class: "control-label" %>
-					<%= form.radio_button :subscription,  class: "form-control" %>
+					<%= form.radio_button :subscription,  class: "form-control" %><br>
 					<%= form.label :subscription_HOffc, "House Clean & Office Fumigation", class: "control-label" %>
-					<%= form.radio_button :subscription,  class: "form-control" %>
+					<%= form.radio_button :subscription,  class: "form-control" %><br>
 					<%= form.label :subscription_LaunH_Offc, "House Clean, Office Fumigation & Laundry", class: "control-label" %>
 					<%= form.radio_button :subscription,  class: "form-control" %>
 				</div>
 			</p>
 
 			
-
+			<br><br>
 			
 
 			<p>
 				<div class="form-group">
-					<%= form.label :amount, class: "control-label" %>
+					
 					
 					<%= form.radio_button :currency, :₦, class: "form-control" %>
 					<%= form.label :currency_NGN, "₦", class: "control-label" %>
@@ -70,12 +70,17 @@
 					<%= form.label :currency_GBP, "£", class: "control-label" %>
 					<%= form.radio_button :currency, :€, class: "form-control" %>
 					<%= form.label :currency_EURO, "€", class: "control-label" %>
-					<%= form.number_field :amount, class: "form-control" %>
+					
 
 				</div>
 			</p>
-
-	
+			<br>
+			<p>
+				<div class="form-group">
+					<%= form.label :amount, class: "control-label" %>
+					<%= form.number_field :amount, class: "form-control" %>
+				</div>
+			</p>
 
 			<p>
 				<div class="form-group">
