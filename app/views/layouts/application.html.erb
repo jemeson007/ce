@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clean</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" %>
+    <h3>
+         <p class="navbar-text pull-right">
+        <% if being_signed_in? %>
+          <strong><%= current_being.userN %></strong>.
+          <%= link_to 'Edit profile', edit_being_registration_path, :class => 'navbar-link' %> |
+          <%= link_to "Logout", destroy_being_session_path, method: :delete, :class => 'navbar-link'  %>
+        <% else %>
+          <%= link_to "Sign up", new_being_registration_path, :class => 'navbar-link'  %> |
+          <%= link_to "Login", new_being_session_path, :class => 'navbar-link'  %>
+        <% end %>
+        </p>
+    </h3>
+  </head>
+
+  <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+  </body>
+</html>

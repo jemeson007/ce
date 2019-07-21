@@ -1,0 +1,56 @@
+<p><div class="row">
+
+  <div class="col-md-3 col-md-offset-1">
+    <strong>Primary Environment -</strong>
+
+</p>
+
+<p><div class="row">
+   <div class="col-md-3 col-md-offset-1">
+     <strong>Name -</strong>
+   </div>
+   <div class="col-md-8">
+     <%= @environ.name %>
+   </div>
+  </div>
+</p>
+<p>
+  <div class="row">
+    <div class="col-md-3 col-md-offset-1">
+      <strong>Place -<strong>
+    </div>
+      <div class="col-md-8">
+        <%= @environ.place %>
+      </div>
+  </div>
+</p>
+<p>
+  <div class="row">
+    <div class="col-md-3 col-md-offset-1">
+      <strong>Subscription -</strong>
+    </div>
+    <div class="col-md-8">
+      <%= @environ.subscription %>
+    </div>
+  </div>
+</p>
+
+<p>
+  <div class="row">
+    <div class="col-md-3 col-md-offset-1">
+      <strong>Price -<strong>
+    </div>
+    <div class="col-md-8">
+      <%= @environ.currency %>
+      <%= @environ.price %>
+    </div>
+  </div>
+</p>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= link_to 'Back', environs_path %>
+  </div>
+</div>
+
+     

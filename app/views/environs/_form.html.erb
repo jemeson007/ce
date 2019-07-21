@@ -1,0 +1,104 @@
+<div class="row">
+	<div class="col-xs-6 col-xs-offset-3">
+
+			<h1>Clean</h1>		
+			<div class="faal">
+
+				
+			<%= form_with model: @environ, local: true, html: {multipart: true} do |form| %>
+
+			<% if @environ.errors.any? %>
+				<div id="alert alert-danger">
+				  <h2>
+				    <%= pluralize(@environ.errors.count, "error") %> prohibited this article from being saved.
+				  </h2>
+				  <ul>
+				     <% @environ.errors.full_messages.each do |msg| %>
+				       <li><%= msg %></li>
+				       <%  end %>
+				  </ul>
+			    </div>
+			<% end %>
+
+	
+			<p>
+				<div class="form-group">
+				<%= form.label :name, class: "control-label" %>
+				<%= form.text_field :name, class: "form-control" %>
+				</div>
+			</p>
+
+			<p>
+				<div class="form-group">
+					<%= form.label :place, class: "control-label" %>
+					<%= form.text_area :place, class: "form-control" %>
+				</div>
+			</p>
+
+			<p>
+				<div class="form-group">
+					<%= form.label :subscription_Laundry, "Laundry", class: "control-label" %>
+					<%= form.radio_button :subscription, class: "form-control" %>
+					<%= form.label :subscription_HouseClean, "House Clean", class: "control-label" %>
+					<%= form.radio_button :subscription,  class: "form-control" %>
+					<%= form.label :subscription_OfficeFumigation,"Office Fumigation", class: "control-label" %>
+					<%= form.radio_button :subscription,  class: "form-control" %>
+					<%= form.label :subscription_LaunH, "Laundry & House Clean", class: "control-label" %>
+					<%= form.radio_button :subscription,  class: "form-control" %>
+					<%= form.label :subscription_LaunOffc, "Laundry & Office Fumigation", class: "control-label" %>
+					<%= form.radio_button :subscription,  class: "form-control" %>
+					<%= form.label :subscription_HOffc, "House Clean & Office Fumigation", class: "control-label" %>
+					<%= form.radio_button :subscription,  class: "form-control" %>
+					<%= form.label :subscription_LaunH_Offc, "House Clean, Office Fumigation & Laundry", class: "control-label" %>
+					<%= form.radio_button :subscription,  class: "form-control" %>
+				</div>
+			</p>
+
+			
+
+			
+
+			<p>
+				<div class="form-group">
+					<%= form.label :amount, class: "control-label" %>
+					
+					<%= form.radio_button :currency, :₦, class: "form-control" %>
+					<%= form.label :currency_NGN, "₦", class: "control-label" %>
+					<%= form.radio_button :currency, :USD, class: "form-control" %>
+					<%= form.label :currency_USD, "$", class: "control-label" %>
+					<%= form.radio_button :currency, :£, class: "form-control" %>
+					<%= form.label :currency_GBP, "£", class: "control-label" %>
+					<%= form.radio_button :currency, :€, class: "form-control" %>
+					<%= form.label :currency_EURO, "€", class: "control-label" %>
+					<%= form.number_field :amount, class: "form-control" %>
+
+				</div>
+			</p>
+
+	
+
+			<p>
+				<div class="form-group">
+					<%= form.label :accountNumber, class: "control-label" %>
+					<%= form.number_field :accountNumber, class: "form-control" %>
+				</div>
+			</p>
+
+			<p>
+				<div class="form-group">
+					<%= form.label :contactNumber, class: "control-label" %>
+					<%= form.number_field :contactNumber, class: "form-control" %>
+				</div>
+			</p>
+
+
+			<p>
+				<div class="form-group">
+					<%= form.submit "Placement", class: "btn btn-primary" %>	
+				</div>
+			</p>
+
+			<% end %> 
+			</div>
+	</div>
+</div>
